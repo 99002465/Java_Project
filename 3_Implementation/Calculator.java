@@ -521,3 +521,182 @@ JButton Equal = new JButton("=");
 		});
 	
 	}
+			
+			
+			
+			
+			
+
+Cos.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		Cos.setBounds(190, 141, 60, 51);
+		frame.getContentPane().add(Cos);
+		
+		JButton Tan = new JButton("tan");
+		Tan.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double a= Math.tan(Double.parseDouble(textField.getText()));
+				textField.setText("");
+				textField.setText(textField.getText()+a);
+			}
+		});
+		Tan.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		Tan.setBounds(250, 141, 60, 51);
+		frame.getContentPane().add(Tan);
+		
+		JButton Tanh = new JButton("tanh");
+		Tanh.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double a= Math.tanh(Double.parseDouble(textField.getText()));
+				textField.setText("");
+				textField.setText(textField.getText()+a);
+			}
+		});
+		Tanh.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		Tanh.setBounds(250, 192, 60, 51);
+		frame.getContentPane().add(Tanh);
+		
+		JButton Cosh = new JButton("cosh");
+		Cosh.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double a= Math.cosh(Double.parseDouble(textField.getText()));
+				textField.setText("");
+				textField.setText(textField.getText()+a);
+			}
+		});
+		Cosh.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		Cosh.setBounds(190, 192, 60, 51);
+		frame.getContentPane().add(Cosh);
+		
+		JButton Sinh = new JButton("sinh");
+		Sinh.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double a= Math.sinh(Double.parseDouble(textField.getText()));
+				textField.setText("");
+				textField.setText(textField.getText()+a);
+			}
+		});
+		Sinh.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		Sinh.setBounds(130, 192, 60, 51);
+		frame.getContentPane().add(Sinh);
+		
+		JButton Log = new JButton("Log");
+		Log.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double a= Math.log(Double.parseDouble(textField.getText()));
+				textField.setText("");
+				textField.setText(textField.getText()+a);
+			}
+		});
+		Log.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		Log.setBounds(70, 192, 60, 51);
+		frame.getContentPane().add(Log);
+		
+		JButton E = new JButton("e^x");
+		E.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double a= Math.exp(Double.parseDouble(textField.getText()));
+				textField.setText("");
+				textField.setText(textField.getText()+a);
+			}
+		});
+		E.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		E.setBounds(70, 141, 60, 51);
+		frame.getContentPane().add(E);
+		
+		JRadioButton rdOn = new JRadioButton("On");
+		rdOn.setSelected(true);
+		rdOn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				btn0.setEnabled(true);
+				btn1.setEnabled(true);
+				btn2.setEnabled(true);
+				btn3.setEnabled(true);
+				btn4.setEnabled(true);
+				btn5.setEnabled(true);
+				btn6.setEnabled(true);
+				btn7.setEnabled(true);
+				btn8.setEnabled(true);
+				btn9.setEnabled(true);
+				
+				Equal.setEnabled(true);
+				Sum.setEnabled(true);
+				Minus.setEnabled(true);
+				Mpy.setEnabled(true);
+				Divide.setEnabled(true);
+				Mod.setEnabled(true);
+				
+				Sin.setEnabled(true);
+				Sinh.setEnabled(true);
+				Cos.setEnabled(true);
+				Cosh.setEnabled(true);
+				Tan.setEnabled(true);
+				Tanh.setEnabled(true);
+				
+				Log.setEnabled(true);
+				btnE.setEnabled(true);
+				btnB.setEnabled(true);
+				btnC.setEnabled(true);
+				Root.setEnabled(true);
+				PM.setEnabled(true);
+				Cube.setEnabled(true);
+				Sqr.setEnabled(true);
+				Pow.setEnabled(true);
+				Rev.setEnabled(true);
+				Fact.setEnabled(true);
+				Dot.setEnabled(true);
+			}
+		});
+		buttonGroup.add(rdOn);
+		rdOn.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		rdOn.setBounds(10, 114, 43, 21);
+		frame.getContentPane().add(rdOn);
+		
+		JRadioButton rdOff = new JRadioButton("Off");
+		rdOff.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btn0.setEnabled(false);
+				btn1.setEnabled(false);
+				btn2.setEnabled(false);
+				btn3.setEnabled(false);
+				btn4.setEnabled(false);
+				btn5.setEnabled(false);
+				btn6.setEnabled(false);
+				btn7.setEnabled(false);
+				btn8.setEnabled(false);
+				btn9.setEnabled(false);
+				
+				Equal.setEnabled(false);
+				Sum.setEnabled(false);
+				Minus.setEnabled(false);
+				Mpy.setEnabled(false);
+				Divide.setEnabled(false);
+				Mod.setEnabled(false);
+				
+				Sin.setEnabled(false);
+				Sinh.setEnabled(false);
+				Cos.setEnabled(false);
+				Cosh.setEnabled(false);
+				Tan.setEnabled(false);
+				Tanh.setEnabled(false);
+				
+				Log.setEnabled(false);
+				btnE.setEnabled(false);
+				btnB.setEnabled(false);
+				btnC.setEnabled(false);
+				Root.setEnabled(false);
+				PM.setEnabled(false);
+				Cube.setEnabled(false);
+				Sqr.setEnabled(false);
+				Pow.setEnabled(false);
+				Rev.setEnabled(false);
+				Fact.setEnabled(false);
+				Dot.setEnabled(false);
+			}
+		});
+		buttonGroup.add(rdOff);
+		rdOff.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		rdOff.setBounds(70, 114, 51, 21);
+		frame.getContentPane().add(rdOff);
+	}
+}
