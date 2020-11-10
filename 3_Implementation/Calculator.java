@@ -518,88 +518,145 @@ mytextField.setText(mytextField.getText()+a);
 			
 			
 			
-
 btnCos.setFont(new Font("Tahoma", Font.PLAIN, 18));
+
 		btnCos.setBounds(190, 141, 60, 51);
+
 		myframe.getContentPane().add(btnCos);
-		
+
 		JButton btnTan = new JButton("tan");
+
 		btnTan.addActionListener(new ActionListener() {
+
 			public void actionPerformed(ActionEvent e) {
+
 				double a= Math.tan(Double.parseDouble(mytextField.getText()));
+
 				mytextField.setText("");
+
 				mytextField.setText(mytextField.getText()+a);
+
 			}
 		});
+
 		btnTan.setFont(new Font("Tahoma", Font.PLAIN, 18));
+
 		btnTan.setBounds(250, 141, 60, 51);
+
 		myframe.getContentPane().add(btnTan);
-		
+
 		JButton btnTanh = new JButton("tanh");
+
 		btnTanh.addActionListener(new ActionListener() {
+
 			public void actionPerformed(ActionEvent e) {
+
 				double a= Math.tanh(Double.parseDouble(mytextField.getText()));
+
 				mytextField.setText("");
+
 				mytextField.setText(mytextField.getText()+a);
+
 			}
+
 		});
+
 		btnTanh.setFont(new Font("Tahoma", Font.PLAIN, 13));
+
 		btnTanh.setBounds(250, 192, 60, 51);
+
 		myframe.getContentPane().add(btnTanh);
-		
+
 		JButton btnCosh = new JButton("cosh");
+
 		btnCosh.addActionListener(new ActionListener() {
+
 			public void actionPerformed(ActionEvent e) {
+
 				double a= Math.cosh(Double.parseDouble(mytextField.getText()));
+
 				mytextField.setText("");
 				mytextField.setText(mytextField.getText()+a);
 			}
 		});
 		btnCosh.setFont(new Font("Tahoma", Font.PLAIN, 13));
+
 		btnCosh.setBounds(190, 192, 60, 51);
+
 		myframe.getContentPane().add(btnCosh);
-		
+
 		JButton btnSinh = new JButton("sinh");
+
 		btnSinh.addActionListener(new ActionListener() {
+
 			public void actionPerformed(ActionEvent e) {
+
 				double a= Math.sinh(Double.parseDouble(mytextField.getText()));
+
 				mytextField.setText("");
+
 				mytextField.setText(mytextField.getText()+a);
+
 			}
+
 		});
+
 		btnSinh.setFont(new Font("Tahoma", Font.PLAIN, 14));
+
 		btnSinh.setBounds(130, 192, 60, 51);
-		myframe.getContentPane().add(btnSinh);
 		
+		myframe.getContentPane().add(btnSinh);
+
 		JButton btnLog = new JButton("Log");
+
 		btnLog.addActionListener(new ActionListener() {
+
 			public void actionPerformed(ActionEvent e) {
 				double a= Math.log(Double.parseDouble(mytextField.getText()));
+				
 				mytextField.setText("");
+
 				mytextField.setText(mytextField.getText()+a);
+
 			}
+
 		});
+
 		btnLog.setFont(new Font("Tahoma", Font.PLAIN, 14));
+
 		btnLog.setBounds(70, 192, 60, 51);
+
 		myframe.getContentPane().add(btnLog);
-		
+
 		JButton btnE = new JButton("e^x");
+
 		btnE.addActionListener(new ActionListener() {
+
 			public void actionPerformed(ActionEvent e) {
+
 				double a= Math.exp(Double.parseDouble(mytextField.getText()));
+
 				mytextField.setText("");
+
 				mytextField.setText(mytextField.getText()+a);
+
 			}
+
+
 		});
+
 		btnE.setFont(new Font("Tahoma", Font.PLAIN, 15));
+
 		btnE.setBounds(70, 141, 60, 51);
-		myframe.getContentPane().add(E);
-		
+
+		myframe.getContentPane().add(btnE);
+
 		JRadioButton rdbtnOn = new JRadioButton("On");
+
 		rdbtnOn.setSelected(true);
 		rdbtnOn.addActionListener(new ActionListener() {
+
 			public void actionPerformed(ActionEvent e) {
-				
 				btn0.setEnabled(true);
 				btn1.setEnabled(true);
 				btn2.setEnabled(true);
@@ -610,21 +667,18 @@ btnCos.setFont(new Font("Tahoma", Font.PLAIN, 18));
 				btn7.setEnabled(true);
 				btn8.setEnabled(true);
 				btn9.setEnabled(true);
-				
 				btnEqual.setEnabled(true);
 				btnSum.setEnabled(true);
 				btnMinus.setEnabled(true);
 				btnMpy.setEnabled(true);
 				btnDivide.setEnabled(true);
 				btnMod.setEnabled(true);
-				
 				Sin.setEnabled(true);
 				btnSinh.setEnabled(true);
 				btnCos.setEnabled(true);
 				btnCosh.setEnabled(true);
 				btnTan.setEnabled(true);
 				btnTanh.setEnabled(true);
-				
 				btnLog.setEnabled(true);
 				btnE.setEnabled(true);
 				btnB.setEnabled(true);
@@ -636,17 +690,18 @@ btnCos.setFont(new Font("Tahoma", Font.PLAIN, 18));
 				btnPow.setEnabled(true);
 				Rev.setEnabled(true);
 				Fact.setEnabled(true);
-				btnDot.setEnabled(true);
+				Dot.setEnabled(true);
+
 			}
 		});
 		buttonGroup.add(rdbtnOn);
 		rdbtnOn.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		rdbtnOn.setBounds(10, 114, 43, 21);
 		myframe.getContentPane().add(rdbtnOn);
-		
 		JRadioButton rdbtnOff = new JRadioButton("Off");
 		rdbtnOff.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+
 				btn0.setEnabled(false);
 				btn1.setEnabled(false);
 				btn2.setEnabled(false);
@@ -657,23 +712,20 @@ btnCos.setFont(new Font("Tahoma", Font.PLAIN, 18));
 				btn7.setEnabled(false);
 				btn8.setEnabled(false);
 				btn9.setEnabled(false);
-				
 				btnEqual.setEnabled(false);
 				btnSum.setEnabled(false);
 				btnMinus.setEnabled(false);
 				btnMpy.setEnabled(false);
 				btnDivide.setEnabled(false);
 				btnMod.setEnabled(false);
-				
 				Sin.setEnabled(false);
 				btnSinh.setEnabled(false);
 				btnCos.setEnabled(false);
 				btnCosh.setEnabled(false);
 				btnTan.setEnabled(false);
 				btnTanh.setEnabled(false);
-				
 				btnLog.setEnabled(false);
-			        btnE.setEnabled(false);
+				btnE.setEnabled(false);
 				btnB.setEnabled(false);
 				btnC.setEnabled(false);
 				Root.setEnabled(false);
@@ -683,12 +735,18 @@ btnCos.setFont(new Font("Tahoma", Font.PLAIN, 18));
 				btnPow.setEnabled(false);
 				Rev.setEnabled(false);
 				Fact.setEnabled(false);
-				btnDot.setEnabled(false);
+				Dot.setEnabled(false);
+
 			}
 		});
+
 		buttonGroup.add(rdbtnOff);
+
 		rdbtnOff.setFont(new Font("Tahoma", Font.PLAIN, 14));
+
 		rdbtnOff.setBounds(70, 114, 51, 21);
+
 		myframe.getContentPane().add(rdbtnOff);
+
 	}
 }
