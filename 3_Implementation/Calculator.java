@@ -345,180 +345,176 @@ public class Calculator {
 		Dot.setFont(new Font("Tahoma", Font.BOLD, 22));
 		Dot.setBounds(190, 447, 60, 52);
         myframe.getContentPane().add(Dot);
-    }
+    
+ JButton btnEqual = new JButton("=");
+btnEqual.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent e) {
+secondnumber = Double.parseDouble(mytextField.getText());
+              if(operation=="+")
+{
+
+result=firstnumber+secondnumber;
+answer= String.format("%.2f", result);
+mytextField.setText(answer);
+
 }
 
+            else if(operation=="-")
 
-JButton btnEqual = new JButton("=");
-		btnEqual.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				secondnumber = Double.parseDouble(mytextField.getText());
-				if(operation=="+")
-				{
-					result=firstnumber+secondnumber;
-					answer= String.format("%.2f", result);
-					mytextField.setText(answer);
-				}
-				else if(operation=="-")
-				{
-					result=firstnumber-secondnumber;
-					answer= String.format("%.2f", result);
-					mytextField.setText(answer);
-				}
-				else if(operation=="*")
-				{
-					result=firstnumber*secondnumber;
-					answer= String.format("%.2f", result);
-					mytextField.setText(answer);
-				}
-				else if(operation=="/")
-				{
-					result=firstnumber/secondnumber;
-					answer= String.format("%.2f", result);
-					mytextField.setText(answer);
-				}
-				else if(operation=="%")
-				{
-					result=firstnumber%secondnumber;
-					answer= String.format("%.2f", result);
-					mytextField.setText(answer);
-				}
-				else if(operation=="x^y")
-				{
-					double resultt=1;
-					for(int i=0;i<second;i++)
-					{
-						resultt=firstnumber*resultt;
-					}
-					answer= String.format("%.2f", resultt);
-					mytextField.setText(answer);
-					
-				}
-			}
-		});
-		btnEqual.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		btnEqual.setBounds(250, 447, 60, 51);
-		myframe.getContentPane().add(btnEqual);
-		
-		JButton btnSum = new JButton("+");
-		btnSum.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				firstnumber=Double.parseDouble(mytextField.getText());
-				mytextField.setText(null);
-				operation="+";
-			}
-		});
-		btnSum.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		btnSum.setBounds(250, 243, 60, 51);
-		myframe.getContentPane().add(btnSum);
-		
-		JButton btnMinus = new JButton("-");
-		btnMinus.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				firstnumber=Double.parseDouble(mytextField.getText());
-				mytextField.setText(null);
-				operation="-";
-			}
-		});
-		btnMinus.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		btnMinus.setBounds(250, 294, 60, 51);
-		myframe.getContentPane().add(btnMinus);
-		
-		JButton btnMpy = new JButton("*");
-		btnMpy.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				firstnumber=Double.parseDouble(mytextField.getText());
-				mytextField.setText(null);
-				operation="*";
-			}
-		});
-		btnMpy.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		btnMpy.setBounds(250, 345, 60, 51);
-		myframe.getContentPane().add(btnMpy);
-		
-		JButton btnDivide = new JButton("/");
-		btnDivide.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				firstnumber=Double.parseDouble(mytextField.getText());
-				mytextField.setText(null);
-				operation="/";
-			}
-		});
-		btnDivide.setFont(new Font("Tahoma", Font.PLAIN, 22));
-		btnDivide.setBounds(250, 396, 60, 51);
-		myframe.getContentPane().add(btnDivide);
-		
-		JButton btnPow = new JButton("x^y");
-		btnPow.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				firstnumber=Double.parseDouble(mytextField.getText());
-				mytextField.setText(null);
-				operation="x^y";
+{
 
-			}
-		});
-		btnPow.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		btnPow.setBounds(10, 243, 60, 51);
-		myframe.getContentPane().add(btnPow);
-		
-		JButton btnMod = new JButton("%");
-		btnMod.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				firstnumber=Double.parseDouble(mytextField.getText());
-				mytextField.setText(null);
-				operation="%";
-			}
-		});
-		btnMod.setFont(new Font("Tahoma", Font.BOLD, 20));
-		btnMod.setBounds(70, 243, 60, 51);
-		myframe.getContentPane().add(btnMod);
-		
-		JButton btnC = new JButton("C");
-		btnC.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				mytextField.setText(null);
-			}
-		});
-		btnC.setFont(new Font("Tahoma", Font.BOLD, 22));
-		btnC.setBounds(130, 243, 60, 51);
-		myframe.getContentPane().add(btnC);
-		
-		JButton btnCube = new JButton("x^3");
-		btnCube.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				double a= (Double.parseDouble(mytextField.getText()));
-				a=a*a*a;
-				mytextField.setText("");
-				mytextField.setText(mytextField.getText()+a);
-			}
-		});
-		btnCube.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		btnCube.setBounds(10, 294, 60, 51);
-		myframe.getContentPane().add(btnCube);
-		
-		JButton btnSqr = new JButton("x^2");
-		btnSqr.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				double a= (Double.parseDouble(mytextField.getText()));
-				a=a*a;
-				mytextField.setText("");
-				mytextField.setText(mytextField.getText()+a);
-			}
-			
-		});
-		btnSqr.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		btnSqr.setBounds(10, 345, 60, 51);
-		myframe.getContentPane().add(btnSqr);
-		
-		JButton btnCos = new JButton("cos");
-		btnCos.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				double a= Math.cos(Double.parseDouble(mytextField.getText()));
-				mytextField.setText("");
-				mytextField.setText(mytextField.getText()+a);
-			}
-		});	
-			
+result=firstnumber-secondnumber;
+answer= String.format("%.2f", result);
+mytextField.setText(answer);
+}
+        else if(operation=="*")
+{
+result=firstnumber*secondnumber;
+answer= String.format("%.2f", result);
+mytextField.setText(answer);
+
+}
+	else if(operation=="/")
+
+{
+
+result=firstnumber/secondnumber;
+answer= String.format("%.2f", result);
+mytextField.setText(answer);
+}
+         else if(operation=="%")
+
+{
+result=firstnumber%secondnumber;
+answer= String.format("%.2f", result);
+mytextField.setText(answer);
+}
+       else if(operation=="x^y")
+{
+
+double resultt=1;
+for(int i=0;i<secondnumber;i++)
+{
+
+resultt=firstnumber*resultt;
+}
+answer= String.format("%.2f", resultt);
+mytextField.setText(answer);
+}
+}
+});
+btnEqual.setFont(new Font("Tahoma", Font.PLAIN, 22));
+btnEqual.setBounds(250, 447, 60, 51);
+myframe.getContentPane().add(btnEqual);
+JButton btnSum = new JButton("+");
+btnSum.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent e) {
+firstnumber=Double.parseDouble(mytextField.getText());
+mytextField.setText(null);
+operation="+";
+}
+});
+btnSum.setFont(new Font("Tahoma", Font.PLAIN, 22));
+btnSum.setBounds(250, 243, 60, 51);
+myframe.getContentPane().add(btnSum);
+JButton btnMinus = new JButton("-");
+btnMinus.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent e) {
+firstnumber=Double.parseDouble(mytextField.getText());
+mytextField.setText(null);
+operation="-";
+}
+});
+btnMinus.setFont(new Font("Tahoma", Font.PLAIN, 22));
+btnMinus.setBounds(250, 294, 60, 51);
+myframe.getContentPane().add(btnMinus);
+JButton btnMpy = new JButton("*");
+btnMpy.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent e) {
+firstnumber=Double.parseDouble(mytextField.getText());
+mytextField.setText(null);
+operation="*";
+}
+});
+btnMpy.setFont(new Font("Tahoma", Font.PLAIN, 22));
+btnMpy.setBounds(250, 345, 60, 51);
+myframe.getContentPane().add(btnMpy);
+JButton btnDivide = new JButton("/");
+btnDivide.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent e) {
+firstnumber=Double.parseDouble(mytextField.getText());
+mytextField.setText(null);
+operation="/";
+}
+});
+btnDivide.setFont(new Font("Tahoma", Font.PLAIN, 22));
+btnDivide.setBounds(250, 396, 60, 51);
+myframe.getContentPane().add(btnDivide);
+JButton btnPow = new JButton("x^y");
+btnPow.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent e) {
+firstnumber=Double.parseDouble(mytextField.getText());
+mytextField.setText(null);
+operation="x^y";
+}
+});
+
+btnPow.setFont(new Font("Tahoma", Font.PLAIN, 14));
+btnPow.setBounds(10, 243, 60, 51);
+myframe.getContentPane().add(btnPow);
+JButton btnMod = new JButton("%");
+btnMod.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent e) {
+firstnumber=Double.parseDouble(mytextField.getText());
+mytextField.setText(null);
+operation="%";
+}
+});
+
+btnMod.setFont(new Font("Tahoma", Font.BOLD, 20));
+btnMod.setBounds(70, 243, 60, 51);
+myframe.getContentPane().add(btnMod);
+JButton btnC = new JButton("C");
+btnC.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent e) {
+mytextField.setText(null);
+}
+});
+btnC.setFont(new Font("Tahoma", Font.BOLD, 22));
+btnC.setBounds(130, 243, 60, 51);
+myframe.getContentPane().add(btnC);
+JButton btnCube = new JButton("x^3");
+btnCube.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent e) {
+double a= (Double.parseDouble(mytextField.getText()));
+           a=a*a*a;
+	mytextField.setText("");
+mytextField.setText(mytextField.getText()+a);
+}
+});
+btnCube.setFont(new Font("Tahoma", Font.PLAIN, 13));
+btnCube.setBounds(10, 294, 60, 51);
+myframe.getContentPane().add(btnCube);
+JButton btnSqr = new JButton("x^2");
+btnSqr.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent e) {
+double a= (Double.parseDouble(mytextField.getText()));
+a=a*a;
+mytextField.setText("");
+mytextField.setText(mytextField.getText()+a);
+}
+});
+btnSqr.setFont(new Font("Tahoma", Font.PLAIN, 15));
+btnSqr.setBounds(10, 345, 60, 51);
+myframe.getContentPane().add(btnSqr);
+JButton btnCos = new JButton("cos");
+btnCos.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent e) {
+double a= Math.cos(Double.parseDouble(mytextField.getText()));
+mytextField.setText("");
+mytextField.setText(mytextField.getText()+a);
+}
+});
 			
 			
 			
